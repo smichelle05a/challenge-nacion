@@ -1,0 +1,76 @@
+$theme-colors: (
+  light: #EFEFEF,
+  gray: #CCC,
+  light-gray: #F2F2F2,
+  light-blue: #0074C4,
+  blue: #126FFF,
+  yellow: #FFFF24,
+  black: #000,
+  pink: #C40F4D,
+  red: #C61C1E,
+  light-pink: #FFEAF1,
+  white: #FFF,
+);
+
+$base: 1rem;
+
+$base-sizes: (
+  none: 0,
+  1: $base * .25,
+  2: $base * .5,
+  3: $base,
+  4: $base * 1.5,
+  5: $base * 2,
+  6: $base *3,
+);
+
+$breakpoints: (
+  sm: 320px,
+  md: 768px,
+  lg: 1920px
+);
+
+$font-sizes: (
+  11: 16px,
+  14: 16px,
+  18: 26px,
+  20: 28px,
+  24: 32px,
+  32: 40px,
+  48: 56px,
+);
+
+// $font-sizes: 11, 14, 18, 20, 24, 32, 48;
+
+$position: absolute, relative;
+
+$display: block, flex, inline;
+
+ /* -----FLEX----- */
+
+$flex-directions: (
+  row: row,
+  col: column,
+  col-reverse: column-reverse,
+);
+
+ $flex-basic: (
+    start: flex-start,
+    end: flex-end,
+    center: center,
+);
+
+$flex-space: (
+    around: space-around,
+    between: space-between,
+    evenly: space-evenly,
+);
+
+$flex-specific: (
+    baseline: baseline,
+    stretch: stretch
+);
+
+$col-base: calc(100% / 12);
+
+$borders: top, bottom, left, right;

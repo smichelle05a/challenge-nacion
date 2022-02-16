@@ -1,0 +1,13 @@
+@import 'variables';
+
+.article {
+  &__img {
+    object-fit: cover;
+    aspect-ratio: 3/2;
+  }
+
+  &__authorImg {
+    width: 80px;
+    aspect-ratio: 1/1;
+  }
+}

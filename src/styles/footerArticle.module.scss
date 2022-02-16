@@ -1,0 +1,21 @@
+@import 'variables';
+
+.article {
+  &__img {
+    object-fit: cover;
+    aspect-ratio: 3/2;
+
+    @media (min-width: 768px) {
+      aspect-ratio: 5/2;
+    }
+  }
+
+  &__body {
+    position: relative;
+    @media (min-width: map-get($breakpoints, md)) {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
