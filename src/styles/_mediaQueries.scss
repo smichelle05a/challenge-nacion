@@ -148,6 +148,10 @@
         border-color: #{$color};
       }
     }
+
+    .d-#{$bp}-none {
+      display: none;
+    }
   }
 }
 

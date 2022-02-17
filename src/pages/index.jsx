@@ -1,6 +1,7 @@
 import articles from '../data/articles.json'
 import Editorials from '../components/Editorials'
 import FooterArticle from '../blocks/FooterArticle'
+import Header from '../blocks/Header'
 import HeaderArticle from '../blocks/HeaderArticle'
 import LeftFocal from '../blocks/LeftFocal'
 import MostRead from '../blocks/MostRead'
@@ -11,6 +12,7 @@ import RightFocal from '../blocks/RightFocal'
 export default function Home() {
   return (
     <div className='d-flex flex-col ai-center'>
+      <Header />
       <HeaderArticle article={articles.header}/>
       <main className='p-md-3 row container'>
         <div className='col-12 main-content px-md-1 px-lg-2'>
