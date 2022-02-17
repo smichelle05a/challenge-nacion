@@ -2,6 +2,7 @@ import Button from '../components/Button'
 import header from '../styles/header.module.scss'
 import Img from '../components/Img'
 import Link from 'next/link'
+import Logo from '../components/Logo'
 
 function Header() {
   return (
@@ -13,7 +14,7 @@ function Header() {
             <Button btn={'secondary'} content='Buscar' svg='/magnifier.svg' />
           </div>
           <div className='col d-flex jc-start jc-lg-center ai-center grow'>
-            <Img src='/logo.svg' alt='Logo Diario La Nacion' classes={`${header.header__top__logo}`} />
+            <Logo classes={`${header.header__top__logo}`} />
           </div>
           <div className={`col d-none d-lg-flex jc-end ${header.header__top__buttonsRight}`}>
             <Button btn={'primary'} content='Suscribite' classes='mr-4' />
