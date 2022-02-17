@@ -1,5 +1,6 @@
 import articles from '../data/articles.json'
 import Editorials from '../components/Editorials'
+import Footer from '../blocks/Footer'
 import FooterArticle from '../blocks/FooterArticle'
 import Header from '../blocks/Header'
 import HeaderArticle from '../blocks/HeaderArticle'
@@ -37,6 +38,7 @@ export default function Home() {
           <FooterArticle article={articles.footer} />
         </div>
       </div>
+      <Footer />
     </div>
   )
 }

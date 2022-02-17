@@ -1,0 +1,39 @@
+@import 'variables';
+
+.footer {
+  &__top {
+    height: 52px;
+
+    &__social {
+      width: 20px;
+      height: 20px;
+    }
+    &__logo {
+      height: 21px;
+    }
+  }
+  &__mid {
+    height: 175px;
+    &__topLinks {
+      font-size: 15px;
+    }
+  }
+  &__bottom {
+    height: 110px;
+    font-size: 15px;
+    
+    &__gda {
+      width: 36px;
+      height: 20px;
+    }
+
+    &__text {
+      font-size: 15px;
+    }
+
+    &__fiscal {
+      width: 28px;
+      height: 38px;
+    }
+  }
+}
