@@ -32,7 +32,7 @@ function Header() {
       </section>
       <section className={`row ac-center jc-center ${header.header__bottom}`}>
         <div className={`container d-flex jc-between`}>
-          <div className='col d-flex jc-start ai-center'>
+          <div className='col col-4 d-flex jc-start ai-center'>
             <p className='fs-14 fw-bold color-light-blue mr-3 d-none d-md-flex'>Dólar: </p>
             <p className='fs-14 fw-bold mr-3'>
               <span className='fw-normal'>BNA: </span>
