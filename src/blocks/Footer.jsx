@@ -1,8 +1,11 @@
 import Logo from '../components/Logo'
 import SocialNetworks from './SocialNetworks'
 import footer from '../styles/footer.module.scss'
-import Img from '../components/Img'
 import Link from 'next/link'
+import Stores from './Stores'
+import GDA from './GDA'
+import Copyright from '../components/Copyright'
+import Captcha from '../components/Captcha'
 
 function Footer() {
   let midLinks = {
@@ -21,22 +24,13 @@ function Footer() {
   return (
     <section className={`${footer.footer} container w-100 d-flex flex-col jc-between`}>
       <div className={`${footer.footer__top} d-flex jc-start ai-center br-bottom`}>
-        <SocialNetworks classes={footer.footer__top__social} />
+        <div className='col col-3 d-flex jc-start ai-center'>
+          <SocialNetworks />
+        </div>
         <div className='col d-flex jc-center ai-center'>
           <Logo classes={`${footer.footer__top__logo}`} />
         </div>
-        <div className='col d-flex jc-end ai-center'>
-          <Link href='#'>
-            <a className='mx-3'>
-              <Img src={'https://arc-static.glanacion.com/pf/resources/images/android-store.svg?d=706'} alt='Download in Google Store' />
-            </a>
-          </Link>
-          <Link href='#'>
-            <a className='mx-3'>
-              <Img src={'https://arc-static.glanacion.com/pf/resources/images/ios-store.svg?d=706'} alt='Download in Google Store' />
-            </a>
-          </Link>
-        </div>
+        <Stores classes='jc-end'/>
       </div>
       <div className={`${footer.footer__mid} pt-1 br-bottom d-flex flex-col jc-around`}>
         <div className={`row ${footer.footer__mid__topLinks}`}>
@@ -87,27 +81,14 @@ function Footer() {
             })}
           </div>
           <div className='col d-flex jc-end'>
-            <p className='w-auto mr-3'>
-              Protegido por reCAPTCHA:
-            </p>
-            {captchaLinks.map((link, index) => {
-              return (
-                <Link href='#' key={index}>
-                  <a className='color-light-blue mr-3 w-auto'>{link}</a>
-                </Link>
-              )
-            })}
+            <Captcha links={captchaLinks}/>
           </div>
         </div>
         <div className='row'>
           <div className='col d-flex ai-center'>
-            <p>Copyright 2019 SA LA NACION | Todos los derechos reservados</p>
+            <Copyright/>
           </div>
-          <div className='col d-flex jc-end ai-center'>
-            <Img src='https://arc-static.glanacion.com/pf/resources/images/gda.svg?d=706' alt='gda' classes={footer.footer__bottom__gda} />
-            <p className={`${footer.footer__bottom__text} mx-3`}>Miembro de GDA. Grupo de Diarios América</p>
-            <Img src='https://arc-static.glanacion.com/pf/resources/images/data-fiscal.svg?d=706' alt='Data Fiscal' classes={footer.footer__bottom__fiscal} />
-          </div>
+          <GDA classes='jc-end'/>
         </div>
       </div>
     </section>

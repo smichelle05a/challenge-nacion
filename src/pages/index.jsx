@@ -2,6 +2,7 @@ import articles from '../data/articles.json'
 import Editorials from '../components/Editorials'
 import Footer from '../blocks/Footer'
 import FooterArticle from '../blocks/FooterArticle'
+import FooterMobile from '../blocks/FooterMobile'
 import Header from '../blocks/Header'
 import HeaderArticle from '../blocks/HeaderArticle'
 import LeftFocal from '../blocks/LeftFocal'
@@ -9,22 +10,27 @@ import MostRead from '../blocks/MostRead'
 import Notes from '../blocks/Notes'
 import Opinion from '../blocks/Opinion'
 import RightFocal from '../blocks/RightFocal'
+import useBreakpoint from '../hooks/useBreakpoint'
+import useScreenSize from '../hooks/useScreenSize'
 
 export default function Home() {
+  let screen = useScreenSize()
+  let breakpoint = useBreakpoint(screen)
+
   return (
     <div className='d-flex flex-col ai-center'>
       <Header />
-      <HeaderArticle article={articles.header}/>
+      <HeaderArticle article={articles.header} />
       <main className='p-md-3 row container'>
         <div className='col-12 main-content px-md-1 px-lg-2'>
-        <div className='bg-pink-10 color-pink fw-bold my-4 ads'>
-          <p>Espacio para Publicidad</p>
-        </div>
+          <div className='bg-pink-10 color-pink fw-bold my-4 ads'>
+            <p>Espacio para Publicidad</p>
+          </div>
           <LeftFocal articles={articles.focalIzquierdo} />
-          <Notes articles ={articles.notasx2} articleWidth={'col-md-6'} title='Notas x 2' />
+          <Notes articles={articles.notasx2} articleWidth={'col-md-6'} title='Notas x 2' />
           <RightFocal articles={articles.focalDerecho} title='Focal Derecho' />
           <Notes articles={articles.notasVarias} articleWidth={'col-md-4'} title='Notas x 3, 6, 9, 12' />
-          <Opinion articles={articles.opinion} last={articles.opinion.length-1} title='Opinión' />
+          <Opinion articles={articles.opinion} last={articles.opinion.length - 1} title='Opinión' />
           <Editorials />
           <Notes articles={articles.notasColor} articleWidth={'col-md-4'} color={'bg-light-blue bg-md-red bg-lg-pink'} title='Notas x 3 Color' />
         </div>
@@ -38,7 +44,7 @@ export default function Home() {
           <FooterArticle article={articles.footer} />
         </div>
       </div>
-      <Footer />
+      {breakpoint == 'L' ? <Footer /> : <FooterMobile />}
     </div>
   )
 }

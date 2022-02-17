@@ -1,6 +1,7 @@
 import Img from '../components/Img'
+import social from '../styles/social.module.scss'
 
-function SocialNetworks({classes}) {
+function SocialNetworks() {
   let networks = [
     'facebook',
     'twitter',
@@ -8,9 +9,13 @@ function SocialNetworks({classes}) {
     'rss'
   ]
   return (
-    <div className='d-flex col'>
-      {networks.map((n, index) => <Img src={`/svg/${n}.svg`} alt={n} classes={`mr-5 ${classes}`} key={index}/>)}
-    </div>
+    <>
+      {networks.map((n, index) => {
+        return <div className={`${social.social} col d-flex jc-center ai-center`} key={index}>
+          <Img src={`/svg/${n}.svg`} alt={n} classes={`${social.socialItem}`}/>
+          </div>
+      })}
+    </>
   )
 }
 
