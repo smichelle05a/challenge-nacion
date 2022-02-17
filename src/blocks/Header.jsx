@@ -10,8 +10,8 @@ function Header() {
       <section className={`row ac-center jc-center br-bottom ${header.header__top}`}>
         <div className={`container d-flex`}>
           <div className={`col d-none d-lg-flex ${header.header__top__buttonsLeft}`}>
-            <Button btn={'secondary'} content='Secciones' svg='/hamburger.svg' classes='mr-4' />
-            <Button btn={'secondary'} content='Buscar' svg='/magnifier.svg' />
+            <Button btn={'secondary'} content='Secciones' svg='/svg/hamburger.svg' classes='mr-4' />
+            <Button btn={'secondary'} content='Buscar' svg='/svg/magnifier.svg' />
           </div>
           <div className='col d-flex jc-start jc-lg-center ai-center grow'>
             <Logo classes={`${header.header__top__logo}`} />
@@ -26,7 +26,7 @@ function Header() {
                 Suscribite
               </a>
             </Link>
-            <Img src='/magnifier.svg' alt='Buscar'/>
+            <Img src='/svg/magnifier.svg' alt='Buscar'/>
           </div>
         </div>
       </section>
@@ -44,7 +44,7 @@ function Header() {
             </p>
           </div>
           <div className='col jc-center ai-center d-none d-lg-flex'>
-            <Img src='/weather.svg' alt='weather' classes='mr-2' />
+            <Img src='/svg/weather.svg' alt='weather' classes='mr-2' />
             <p className='fs-14'>
               <span className='fw-bold mr-1'>00.0°</span>
               Capital Federal
@@ -60,7 +60,7 @@ function Header() {
           <div className='col d-flex jc-end ai-center d-none d-md-flex'>
             <Link href='#'>
               <a className='color-light-blue d-flex jc-center ai-center'>
-                <Img src='/club.svg' alt='Club La Nación' classes='mr-2' />
+                <Img src='/svg/club.svg' alt='Club La Nación' classes='mr-2' />
                 Descubrí tus beneficios
               </a>
             </Link>
